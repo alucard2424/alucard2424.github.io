@@ -19,6 +19,7 @@ img{max-width:100%}
 [hidden]{display:none!important}
 </style>
 <title>Abdul Wasay</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230d7480%22/%3E%3Cpath%20d%3D%22M8%2040h14c6%200%208-16%2014-16h20%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M8%2040h14c6%200%208%200%2014%200h20%22%20fill%3D%22none%22%20stroke%3D%22%23ff5a74%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -64,7 +65,7 @@ h1{font-size:clamp(46px, 9vw, 104px);font-weight:800;line-height:.92}
 h2{font-size:clamp(30px, 4.6vw, 46px);font-weight:800;line-height:1.05}
 h3{font-size:21px;font-weight:600;line-height:1.2}
 p{margin:0}
-.lead{font-size:clamp(19px, 2.2vw, 23px);line-height:1.45}
+.lead{font-family:var(--display);font-size:clamp(18px, 2vw, 21px);line-height:1.5;letter-spacing:-.005em;color:var(--muted)}
 .muted{color:var(--muted)}
 .mono{font-family:var(--mono);font-size:13px}
 .stack{display:flex;flex-direction:column;gap:18px}
@@ -130,8 +131,8 @@ ul.plain li::marker{color:var(--accent)}
 .cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .cols3 > div{display:flex;flex-direction:column;gap:8px;min-width:0}
 .timeline{display:flex;flex-direction:column}
-.timeline div{display:grid;grid-template-columns:170px 1fr;gap:16px;padding-block:12px;border-bottom:1px solid var(--line)}
-.timeline div > *{min-width:0}
+.timeline > div{display:grid;grid-template-columns:170px 1fr;gap:16px;padding-block:12px;border-bottom:1px solid var(--line)}
+.timeline > div > *{min-width:0}
 .timeline .when{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:3px}
 footer{padding-block:40px 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
 
@@ -221,6 +222,11 @@ footer{padding-block:40px 60px;border-top:1px solid var(--line);color:var(--mute
 @media (prefers-reduced-motion: reduce){.tffSvg .tp{transition:none}}
 .facts{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 .lead .pitch{font-weight:600;color:var(--ink)}
+.otw{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 12px 4px 10px}
+.otw i{width:7px;height:7px;border-radius:50%;background:#1f9d55;box-shadow:0 0 0 3px color-mix(in srgb,#1f9d55 22%,transparent)}
+.mywork{display:grid;grid-template-columns:170px 1fr;gap:16px;align-items:baseline;border-top:1px solid var(--line);padding-top:18px}
+.mywork p{margin:0;max-width:72ch}
+@media (max-width: 620px){.mywork{grid-template-columns:1fr;gap:6px}}
 .about-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:start}
 .about-grid > *{min-width:0}
 .how{display:flex;flex-direction:column;border-top:1px solid var(--line)}
@@ -328,7 +334,7 @@ details.more>.panel{border:0;border-top:1px solid var(--line);border-radius:0;ma
   .taped{grid-template-columns:1fr}
   .taped div:nth-child(even){padding-left:0;border-left:0}
   .taped div:nth-child(odd){padding-right:0}
-  .timeline div{grid-template-columns:1fr;gap:2px}
+  .timeline > div{grid-template-columns:1fr;gap:2px}
   nav{gap:12px}
 }
 @media (max-width: 520px){ nav{display:none} .facts{grid-template-columns:1fr} .pipeline{grid-template-columns:1fr} body{font-size:16.5px} }
@@ -354,6 +360,7 @@ details.more>.panel{border:0;border-top:1px solid var(--line);border-radius:0;ma
   <div class="hero-grid">
     <div class="stack">
       <div class="eyebrow"><span>Physicist</span><span>Integrated and quantum photonics</span></div>
+      <div class="otw"><i aria-hidden="true"></i>Open to work · PhD positions and R&amp;D roles</div>
       <div class="idrow"><img class="avatar" src="portrait.jpg" alt="Portrait of Abdul Wasay" width="128" height="128"><h1>Abdul<br>Wasay</h1></div>
       <p class="lead"><b class="pitch">I take photonic chips from simulation to tape-out to measurement.</b> Two years of PIC design, characterisation and lab automation at Fraunhofer HHI, and a master’s in theoretical physics on open quantum systems.</p>
       <div class="links">
@@ -382,7 +389,7 @@ details.more>.panel{border:0;border-top:1px solid var(--line);border-radius:0;ma
 
 
 <section class="area" id="highlights">
-  <div class="stack prose"><div class="eyebrow"><span>Highlights</span></div><h2>Selected results</h2></div>
+  <div class="stack prose"><h2>Highlights</h2></div>
   <div class="hlgrid">
     <a class="hl" href="#awgPanel"><em>PIC design · tape-out</em><b>16-channel polymer AWG</b><span>Designed with my own IPKISS package and taped out; −30 dB crosstalk measured in the photon-pair system.</span><i>Open the layout and spectra →</i></a>
     <a class="hl" href="#m9Panel"><em>Silicon nitride</em><b>9×9 Talbot-effect splitter</b><span>Fabricated outputs within 0.8 % of each other; five SiN MMIs designed in total, from 1×2 to 9×9.</span><i>Explore the FDTD field →</i></a>
@@ -390,6 +397,10 @@ details.more>.panel{border:0;border-top:1px solid var(--line);border-radius:0;ma
     <a class="hl" href="#setupPanel"><em>Lab and automation</em><b>Photon-pair setup, built and automated</b><span>Live wavelength tracking, photon-based fibre alignment and power locking, used to characterise PPLN and BRW photon-pair sources from bare chip to packaged sub-assembly.</span><i>See the setup and data →</i></a>
     <a class="hl" href="#theory"><em>Master’s thesis · first author</em><b>Open quantum many-body dynamics</b><span>A new local method for non-Markovian quantum state diffusion, run on spin chains with up to 35 sites on about 52 GPUs.</span><i>Try the noise generator →</i></a>
     <a class="hl" href="#pdk"><em>Design automation</em><b>Tools nobody asked for</b><span>Two AWG design packages from scratch to GDSII, and a robust N×N MMI optimiser in development.</span><i>See the pipeline →</i></a>
+  </div>
+  <div class="mywork">
+    <h3>My work</h3>
+    <p><b>I turn each project into reusable tools.</b> Two AWG design packages, measurement scripts with live plotting and HDF5 storage, an MMI optimiser: tools nobody asked for, that colleagues appreciate. Each project also teaches me a better way to do the next one.</p>
   </div>
 </section>
 
@@ -406,7 +417,6 @@ details.more>.panel{border:0;border-top:1px solid var(--line);border-radius:0;ma
         <div><b>Independent, and ahead of deadlines.</b><span>Finishing early leaves room to go further on a component, into directions nobody had planned to explore.</span></div>
         <div><b>I look for where an approach breaks.</b><span>Approximations have limits. I check the conditions under which a method stops holding, so problems don’t come back later in fabrication or in the lab.</span></div>
         <div><b>I fix what limits the setup.</b><span>On our photon-pair setup I traced the weak points and added live wavelength tracking, photon-based fibre alignment through a Moku signal chain, and pump power stabilisation, which made the measurements more reliable.</span></div>
-        <div><b>I turn each project into reusable tools.</b><span>Two AWG design packages, measurement scripts with live plotting and HDF5 storage, an MMI optimiser: tools nobody asked for, that colleagues appreciate. Each project also teaches me a better way to do the next one.</span></div>
       </div>
     </div>
     <div class="stack" style="gap:14px">
